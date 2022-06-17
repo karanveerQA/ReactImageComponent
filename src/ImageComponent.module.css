@@ -1,0 +1,25 @@
+.card {
+  height: 500px;
+  width: 300px;
+  background-color: #777;
+  padding: 5px;
+}
+
+.green_btn,
+.red_btn,
+.btn {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.green_btn {
+  background-color: green;
+}
+
+.red_btn {
+  background-color: red;
+}

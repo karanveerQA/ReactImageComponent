@@ -1,0 +1,23 @@
+.nav {
+  background-color: #555;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: stretch;
+}
+
+.a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+.a:hover {
+  background-color: #777;
+}
+
+.a:active {
+  background-color: #777;
+}
