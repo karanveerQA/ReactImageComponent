@@ -3,68 +3,15 @@ import Menu from "./Menu.js";
 import { Routes, Route } from "react-router-dom";
 import ImageComponent from "./ImageComponent.js";
 import classes from "./Home.module.css";
-
+import { useSelector, useDispatch } from "react-redux";
 const Home = () => {
-  const [data, setData] = useState([
-    {
-      id: 1,
-      name: "user 1",
-      img: "./images/tiger.jpg",
-      likeCount: 0,
-      dislikeCount: 0,
-    },
-    {
-      id: 2,
-      name: "user 2",
-      img: "./images/tiger2.jpg",
-      likeCount: 0,
-      dislikeCount: 0,
-    },
-    {
-      id: 3,
-      name: "user 3",
-      img: "./images/tiger3.jpg",
-      likeCount: 0,
-      dislikeCount: 0,
-    },
-    {
-      id: 4,
-      name: "user 4",
-      img: "./images/tiger4.jpg",
-      likeCount: 0,
-      dislikeCount: 0,
-    },
-    {
-      id: 5,
-      name: "user 5",
-      img: "./images/tiger5.jpg",
-      likeCount: 0,
-      dislikeCount: 0,
-    },
-    {
-      id: 6,
-      name: "user 6",
-      img: "./images/tiger6.jpg",
-      likeCount: 0,
-      dislikeCount: 0,
-    },
-  ]);
-
-  const updateData = (obj) => {
-    const array = data.map((el) => {
-      if (el.id === obj.id) {
-        return { ...obj };
-      }
-      return { ...el };
-    });
-
-    setData(array);
-  };
-
+  const data = useSelector((state) => {
+    return state;
+  });
   return (
     <div className={classes.grid_container}>
       {data.map((el) => (
-        <ImageComponent data={el} key={el.id} updateData={updateData} />
+        <ImageComponent data={el} key={el.id} />
       ))}
 
       {/* <Routes>

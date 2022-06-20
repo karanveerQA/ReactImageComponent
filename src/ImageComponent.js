@@ -1,15 +1,17 @@
 import React from "react";
 import classes from "./ImageComponent.module.css";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 const ImageComponent = (props) => {
+  const dispatch=useDispatch();
   const changeLikeHandler = () => {
-    props.updateData({ ...props.data, likeCount: props.data.likeCount + 1 });
+
+    dispatch({type:'like',obj:{...props.data,likeCount:props.data.likeCount+1}});
+   
   };
   const changeDislikeHandler = () => {
-    props.updateData({
-      ...props.data,
-      dislikeCount: props.data.dislikeCount + 1,
-    });
+    dispatch({type:'like',obj:{...props.data,dislikeCount:props.data.dislikeCount+1}});
+   
   };
 
   return (
